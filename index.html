@@ -1,57 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Registration and Prize Draw</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
     <div class="container">
-      <h2>Event Registration</h2>
-      <form id="registrationForm">
-        <label for="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="John Doe"
-          required
-        />
-        <span class="error" id="nameError"></span>
+        <h2>Event Registration</h2>
+        <form id="registrationForm">
+            <label for="name">الاسم:</label>
+            <input type="text" id="name" name="name" placeholder="محمد بن سلمان" required>
+            <span class="error" id="nameError"></span>
 
-        <label for="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="john.doe@example.com"
-          required
-        />
-        <span class="error" id="emailError"></span>
+            <label for="phone">رقم الجوال:</label>
+            <input type="tel" id="phone" name="phone" placeholder="0501234567" required>
+            <span class="error" id="phoneError"></span>
 
-        <label for="phone">Phone:</label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          placeholder="1234567890"
-          required
-        />
-        <span class="error" id="phoneError"></span>
+            <label for="id">رقم الهوية السعودية:</label>
+            <input type="text" id="id" name="id" placeholder="1234567890" required>
+            <span class="error" id="idError"></span>
 
-        <div class="checkbox">
-          <input type="checkbox" id="prizeDraw" name="prizeDraw" />
-          <label for="prizeDraw">Apply for Prize Draw</label>
-        </div>
-        <button type="submit">Register</button>
-      </form>
+            <div class="checkbox">
+                <input type="checkbox" id="prizeDraw" name="prizeDraw">
+                <label for="prizeDraw">Apply for Prize Draw</label>
+            </div>
+            <button type="submit">Register</button>
+        </form>
     </div>
     <div class="container">
-      <h2>Prize Draws</h2>
-      <button id="drawPrizeButton">Withdraw Winner</button>
-      <p id="winner"></p>
+        <h2>Prize Draws</h2>
+        <button id="drawPrizeButton">Withdraw Winner</button>
+        <p id="winner"></p>
     </div>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
