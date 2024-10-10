@@ -27,6 +27,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  margin-bottom: 20px;
 }
 
 label {
@@ -35,7 +36,7 @@ label {
   font-size: 16px;
 }
 
-input {
+input, select {
   padding: 12px;
   margin-bottom: 16px;
   border: 1px solid #ccc;
@@ -82,6 +83,39 @@ table th {
   background-color: #f4f4f4;
 }
 
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* New Staff Management Styles */
+#addStaffForm {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#addStaffForm input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#addStaffForm button {
+  width: 25%;
+  padding: 10px;
+  background-color: #28a745;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+#addStaffForm button:hover {
+  background-color: #218838;
+}
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .container {
@@ -90,7 +124,7 @@ table th {
       width: 100%;
   }
 
-  input, button {
+  input, button, select {
       font-size: 14px;
   }
 
@@ -106,7 +140,7 @@ table th {
       width: 100%;
   }
 
-  input, button {
+  input, button, select {
       font-size: 14px;
   }
 
@@ -122,7 +156,7 @@ table th {
       width: 100%;
   }
 
-  input, button {
+  input, button, select {
       font-size: 12px;
   }
 

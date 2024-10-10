@@ -10,24 +10,37 @@
     <div class="container">
         <h2>Event Registration</h2>
         <form id="registrationForm">
+            <!-- Existing fields -->
             <label for="name">الاسم:</label>
             <input type="text" id="name" name="name" placeholder="محمد بن سلمان" required>
             <span class="error" id="nameError"></span>
-
+        
             <label for="phone">رقم الجوال:</label>
             <input type="tel" id="phone" name="phone" placeholder="0501234567" required>
             <span class="error" id="phoneError"></span>
-
+        
             <label for="id">رقم الهوية السعودية:</label>
             <input type="text" id="id" name="id" placeholder="1234567890" required>
             <span class="error" id="idError"></span>
-
+        
+            <!-- New fields -->
+            <label for="nationalities">الجنسيات المطلوبة:</label>
+            <input type="text" id="nationalities" name="nationalities" placeholder="سعودي، مصري..." required>
+        
+            <label for="customerService">موظف خدمة العملاء:</label>
+            <select id="customerService" name="customerService" required>
+                <option value="">اختر موظف خدمة العملاء</option>
+                <!-- Dynamic options will be added here -->
+            </select>
+            <span class="error" id="customerServiceError"></span>
+        
             <div class="checkbox">
                 <input type="checkbox" id="prizeDraw" name="prizeDraw">
                 <label for="prizeDraw">Apply for Prize Draw</label>
             </div>
             <button type="submit">Register</button>
         </form>
+        
     </div>
     <div class="container" style="display: none;">
         <h2>Prize Draws</h2>

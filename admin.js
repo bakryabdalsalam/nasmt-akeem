@@ -40,3 +40,44 @@ document.addEventListener('DOMContentLoaded', function() {
     loadRegisteredUsers();
     exportButton.addEventListener('click', exportToExcel);
 });
+
+
+// Array to store staff members (in real application, this could be fetched from the server)
+let staffMembers = JSON.parse(localStorage.getItem('staffMembers')) || [];
+
+// Function to render staff in the table
+function renderStaff() {
+    const staffTable = document.getElementById('staffTable').getElementsByTagName('tbody')[0];
+    staffTable.innerHTML = '';
+    staffMembers.forEach((staff, index) => {
+        let row = staffTable.insertRow();
+        row.innerHTML = `
+            <td>${staff}</td>
+            <td>
+                <button onclick="deleteStaff(${index})">Delete</button>
+            </td>
+        `;
+    });
+}
+
+// Add new staff
+document.getElementById('addStaffForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const newStaff = document.getElementById('newStaff').value;
+    if (newStaff) {
+        staffMembers.push(newStaff);
+        localStorage.setItem('staffMembers', JSON.stringify(staffMembers));
+        renderStaff();
+        document.getElementById('newStaff').value = '';
+    }
+});
+
+// Delete staff
+function deleteStaff(index) {
+    staffMembers.splice(index, 1);
+    localStorage.setItem('staffMembers', JSON.stringify(staffMembers));
+    renderStaff();
+}
+
+// Initial render
+renderStaff();

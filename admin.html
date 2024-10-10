@@ -7,6 +7,27 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <div class="container">
+        <h2>Manage Customer Service Staff</h2>
+        <form id="addStaffForm">
+            <label for="newStaff">Add New Staff:</label>
+            <input type="text" id="newStaff" name="newStaff" placeholder="Enter Staff Name" required>
+            <button type="submit">Add Staff</button>
+        </form>
+    
+        <h2>Existing Staff</h2>
+        <table id="staffTable">
+            <thead>
+                <tr>
+                    <th>Staff Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    
     <div class="container">
         <h2>Registered Users</h2>
         <table id="usersTable">

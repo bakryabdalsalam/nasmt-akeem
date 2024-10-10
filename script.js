@@ -83,3 +83,21 @@ document.addEventListener('DOMContentLoaded', function() {
         winnerDisplay.textContent = `Winner: ${winner.name} (${winner.phone})`;
     });
 });
+
+
+// Function to populate the customer service staff dropdown
+function populateCustomerServiceDropdown() {
+    const customerServiceDropdown = document.getElementById('customerService');
+    customerServiceDropdown.innerHTML = '<option value="">اختر موظف خدمة العملاء</option>'; // Reset dropdown
+    const staffMembers = JSON.parse(localStorage.getItem('staffMembers')) || [];
+    staffMembers.forEach(staff => {
+        let option = document.createElement('option');
+        option.value = staff;
+        option.textContent = staff;
+        customerServiceDropdown.appendChild(option);
+    });
+}
+
+// Call the function to populate dropdown on page load
+populateCustomerServiceDropdown();
+
