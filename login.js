@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const loginForm = document.getElementById('loginForm');
     const loginError = document.getElementById('loginError');
 
-    const storedUsername = 'admin';
-    const storedPassword = 'password123';
+    const storedUsername = 'Bakry';
+    const storedPassword = 'A&b01201361436';
 
     loginForm.addEventListener('submit', function(event) {
         event.preventDefault();
