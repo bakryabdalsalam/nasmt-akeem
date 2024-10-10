@@ -4,10 +4,16 @@ body {
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
+}
+
+.body-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .container {
@@ -15,11 +21,11 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 60%;
-  width: 60%;
-  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+  margin-bottom: 20px;
   box-sizing: border-box;
-  margin: 0 10px;
+  text-align: center;
 }
 
 /* Form Styles */
@@ -93,17 +99,18 @@ table th {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  gap: 10px;
 }
 
 #addStaffForm input {
-  width: 70%;
+  flex: 3;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
 #addStaffForm button {
-  width: 25%;
+  flex: 1;
   padding: 10px;
   background-color: #28a745;
   border: none;
@@ -119,58 +126,85 @@ table th {
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .container {
-      padding: 15px;
-      max-width: 100%;
-      width: 100%;
+    padding: 15px;
+    max-width: 90%;
+    width: 90%;
   }
 
   input, button, select {
-      font-size: 14px;
+    font-size: 14px;
   }
 
   label {
-      font-size: 14px;
+    font-size: 14px;
+  }
+
+  #addStaffForm {
+    flex-direction: column;
+  }
+
+  #addStaffForm input, #addStaffForm button {
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
 
 @media (max-width: 768px) {
   .container {
-      padding: 15px;
-      max-width: 100%;
-      width: 100%;
+    padding: 15px;
+    max-width: 90%;
+    width: 90%;
   }
 
   input, button, select {
-      font-size: 14px;
+    font-size: 14px;
   }
 
   label {
-      font-size: 14px;
+    font-size: 14px;
+  }
+
+  table th, table td {
+    padding: 10px;
+  }
+
+  #addStaffForm {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #addStaffForm input, #addStaffForm button {
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
 
 @media (max-width: 480px) {
   .container {
-      padding: 10px;
-      max-width: 100%;
-      width: 100%;
+    padding: 10px;
+    max-width: 100%;
+    width: 100%;
   }
 
   input, button, select {
-      font-size: 12px;
+    font-size: 12px;
   }
 
   label {
-      font-size: 12px;
+    font-size: 12px;
   }
 
   table th, table td {
-      padding: 8px;
-      font-size: 12px;
+    padding: 8px;
+    font-size: 12px;
   }
-}
 
-.body-container{
-  display: flex;
-  flex-direction: column;
+  #addStaffForm {
+    flex-direction: column;
+  }
+
+  #addStaffForm input, #addStaffForm button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
